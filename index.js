@@ -314,7 +314,7 @@ app.get("/search-notes", authenticateToken, async (req, res) => {
 });
 
 // Listen on port 8000
-app.listen(8000, () => {
+app.listen(8000, "0.0.0.0", () => {
   console.log("Server running on port 8000");
 });
 
