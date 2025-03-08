@@ -13,7 +13,13 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Parse JSON request bodies
-app.use(cors({ origin: "*" })); // Enable CORS from any origin
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Change this to your frontend URL
+    credentials: true, // Allow cookies/auth headers if needed
+  })
+);
+
 
 // Connect to MongoDB (without deprecated options)
 mongoose
